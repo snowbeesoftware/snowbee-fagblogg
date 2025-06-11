@@ -17,7 +17,7 @@ export default function RootLayout({
                         <Link href={"/"}>SnowBee Fagblogg</Link>
                     </div>
                 </header>
-                <div className={"h-8"}></div>
+                <div className={"h-2"}></div>
                 <main className={"mx-auto max-w-3xl px-2"}>{children}</main>
                 <footer className={"min-h-24"}></footer>
             </body>
