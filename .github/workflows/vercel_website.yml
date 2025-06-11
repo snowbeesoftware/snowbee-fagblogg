@@ -1,0 +1,28 @@
+name: Vercel Website
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+      - 'content/**'
+      - '.github/workflows/vercel_website.yml'
+
+
+jobs:
+  Deploy-Website-Production:
+    runs-on: [ self-hosted ]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup PATH for npm global
+        run: echo "$HOME/.npm-global/bin" >> $GITHUB_PATH
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Build Project Artifacts
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Deploy Project Artifacts to Vercel
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+
