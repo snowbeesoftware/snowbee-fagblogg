@@ -59,4 +59,4 @@ Denne bloggen er nokså rett frem, og vi forventer ikke mere trafikk enn at grat
 
 ## Open Source
 
-Hvis du skulle være nysgjerrig på alt eller ingenting om fagbloggens oppsett, ligger all koden ute på GitHub.
+Hvis du skulle være nysgjerrig på alt eller ingenting om fagbloggens oppsett, ligger all koden ute på GitHub: https://github.com/snowbeesoftware/snowbee-fagblogg.
