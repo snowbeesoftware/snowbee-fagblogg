@@ -13,12 +13,12 @@ export default function RootLayout({
         <html lang="no">
             <body className={`${inter.className} antialiased`}>
                 <header className={"bg-slate-200"}>
-                    <div className={"mx-auto max-w-3xl text-center py-4"}>
+                    <div className={"mx-auto max-w-3xl text-center py-4 px-2"}>
                         <Link href={"/"}>SnowBee Fagblogg</Link>
                     </div>
                 </header>
                 <div className={"h-8"}></div>
-                <main className={"mx-auto max-w-3xl"}>{children}</main>
+                <main className={"mx-auto max-w-3xl px-2"}>{children}</main>
                 <footer className={"min-h-24"}></footer>
             </body>
         </html>
