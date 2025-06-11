@@ -2,6 +2,7 @@ import {notFound} from "next/navigation"
 import {getBlogPostFromSlug} from "@/homeless/blog-post-utils"
 import {remark} from "remark"
 import html from "remark-html"
+import plainText from "remark-plain-text"
 import {DateTimeFormatter} from "@js-joda/core"
 import {BlogPostAuthor} from "@/components/BlogPostAuthor"
 import {Metadata, ResolvingMetadata} from "next"
@@ -16,8 +17,18 @@ export async function generateMetadata(
         notFound()
     }
 
+    const description = await remark()
+        .use(plainText)
+        .process(blogPost.headers["description"] ?? "")
+
     return {
-        title: `${blogPost.headers.title} | SnowBee Fagblogg`
+        title: `${blogPost.headers.title} | SnowBee Fagblogg`,
+        openGraph: {
+            type: "website",
+            title: blogPost.headers.title,
+            description: description.toString(),
+            siteName: "SnowBee Fagblogg"
+        }
     }
 }
 
