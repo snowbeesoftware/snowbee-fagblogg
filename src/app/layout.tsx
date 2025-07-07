@@ -12,7 +12,7 @@ export default function RootLayout({
     return (
         <html lang="no">
             <body className={`${inter.className} antialiased @container`}>
-                <header className={"bg-slate-200"}>
+                <header className={"bg-sb-fagblogg-panel"}>
                     <div className={"mx-auto max-w-3xl text-center py-4 px-2"}>
                         <Link href={"/"}>SnowBee Fagblogg</Link>
                     </div>

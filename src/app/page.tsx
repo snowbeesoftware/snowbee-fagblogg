@@ -19,7 +19,11 @@ export default async function Home() {
 
     return (
         <div>
-            <div className={"sb_typography border border-slate-300 bg-slate-100 rounded-xl p-4"}>
+            <div
+                className={
+                    "sb_typography border border-sb-fagblogg-panel bg-sb-fagblogg-panel/50 rounded-xl p-4"
+                }
+            >
                 <p>
                     Velkommen til SnowBee sin tekniske fagblogg! Her skriver vi løst og fast om
                     hvordan vi jobber med softwareutvikling.

@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --sb-fagblogg-panel: var(--color-slate-200);
 }
 
 @theme inline {
@@ -10,17 +11,22 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-sb-fagblogg-panel: var(--sb-fagblogg-panel)
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --sb-fagblogg-panel: var(--color-slate-700);
   }
 }
 
+html {
+    background: var(--background);
+}
+
 body {
-  background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -34,13 +40,13 @@ body {
 }
 
 .sb_typography pre {
-  @apply bg-slate-50 border border-slate-200 rounded-xl p-4
+  @apply bg-sb-fagblogg-panel/50 border border-sb-fagblogg-panel rounded-xl p-4
 }
 
 .sb_typography p code {
-  @apply bg-slate-200 p-0.5
+  @apply bg-sb-fagblogg-panel p-0.5
 }
 
 .sb_typography a {
-  @apply text-blue-500 underline
+  @apply text-blue-500 dark:text-blue-400 underline
 }
