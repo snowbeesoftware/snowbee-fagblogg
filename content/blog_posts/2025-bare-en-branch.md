@@ -1,6 +1,6 @@
 ---
 title: Bare én branch
-# published: 2025-07-25
+published: 2025-07-25
 author: august
 description: |
     Vi driver ikke med feature branching. I stedet for å integrere daglig eller ukentlig med pull requests, integrerer vi kontinuerlig.
