@@ -8,9 +8,9 @@ description: |
 
 ## Én kodebase, kontinuerlig integrert
 
-Kontinuerlig integrasjon. Continous integration. CI. Det handler ikke bare om automatiserte bygg. CI er å integrere alle komponentene i systemet sitt, kontinuerlig.
+Kontinuerlig integrasjon = Continous integration = CI. Mange assosierer nok CI/CD med automatiserte bygg som ruller ut ny kode til produksjonsmiljøet. Det er en del av pakka, men CI er mere enn bare automatisering. CI er å integrere alle komponentene i systemet sitt, kontinuerlig.
 
-Dersom du bruker pull requests, integrerer du når du merger pull requestet. Det kan dermed ikke kalles kontinuerlig integrering.
+Dersom du bruker pull requests, *integrerer* du en feature branch mot hoved-branchen når du merger pull requestet. Det kan dermed ikke kalles kontinuerlig integrering.
 
 Og jo lengere en branch får leve, jo sjeldnere integrerer du, og jo flere "kopier" av kodebasen din må du forholde deg til.
 
