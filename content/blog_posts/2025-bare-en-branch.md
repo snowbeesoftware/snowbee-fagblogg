@@ -14,7 +14,7 @@ Kontinuerlig integrasjon. Continous integration. CI.
 
 CI handler ikke bare om automatiserte bygg, men idéen om at man integrerer komponentene i systemet sitt, kontinuerlig.
 
-Alle som har jobbet litt med git vet hvor moro det er å kose seg med merge-konflikter etter å ha jobbet med noe i dages- eller ukesvis. Dette kan man heldigvis bøte på ved at hver enkelt utvikler hyppig rebaser sin feature branch mot main. Da gjør utvikleren på sett og vis sin egen kontinuerlige integrasjon.
+Alle som har jobbet litt med git vet hvor moro det er å kose seg med merge-konflikter etter å ha jobbet med noe i dages- eller ukesvis. Dette kan man heldigvis bøte på med hyppig rebasing mot main. Da gjør utvikleren på sett og vis sin egen lokale kontinuerlige integrasjon.
 
 Men branchene deler ikke kode seg imellom. Hvis feature branch A har noe nyttig util-kode i seg som feature branch B trenger, må man smøre seg med tålmodighet. I praksis sitter man igjen med `1 + antall brancher` versjoner av kodebasen. Det er riktignok fullt mulig å få det til, ved at man lager en egen branch C for utils og får de merget inn i main isolert sett. Men det oppleves kanskje unødvendig jobbigt om man er en liten håndfull utviklere som bare har lyst til å få ting gjort.
 
@@ -22,9 +22,9 @@ Men branchene deler ikke kode seg imellom. Hvis feature branch A har noe nyttig 
 
 Men klarer man seg uten brancher? Hvordan jobber vi med funksjonalitet som tar dagesvis eller ukesvis å få produksjonsklart?
 
-En løsning kunne jo være å ikke pushe uferdig kode. Når man bruker git, har man i praksis én branch per utvikler. Men da er man jo i praksis like langt, og har en haug med kode liggende hos hver enkelt utvikler som ikke er integrert på noe vis.
+En løsning kunne jo være å ikke pushe uferdig kode. Når man bruker git, har man i praksis én branch per utvikler. Men da er man jo egentlig like langt, og har en haug med kode liggende som ikke er integrert på noe vis.
 
-Men vi løser det med *feature flags*.
+Vi løser det med *feature flags*.
 
 Det er jo ingen naturlov som sier at det ikke er lov å ha uferdige ting i produksjonsmiljøet. Rundt regnet alle kodebaser i produksjon har en eller annen form for konfigurasjon. Og da har du egentlig alt du trenger for å få til feature flags, som i praksis bare er et fænsi navn på muligheten til å skru ting av og på.
 
@@ -47,7 +47,6 @@ Dette løser vi med varierende grad av - avhengig av størrelsen på endringene 
 På sett og vis er dette ekstrem-versjonen av blue/green deployments. I dag er det vanlig at utrulling og produksjonssetting av ny kode starter opp en ny instans, peker produksjonsmiljøet på den nye instansen, og tar så ned den gamle når den nye har tatt over. Dette betyr at ny og gammel kode lever side om side i produksjon i noen sekunder eller minutter, mens byttet skjer.
 
 Kostnaden med denne måten å jobbe på, er at man blir nødt til å gjøre ting stykkevis og delt. Ofte ender man opp med å måtte lage en "versjon 2" som lever side om side med det du skal erstatte. 
-
 
 ## Gradvis utrulling av ny funksonalitet
 
