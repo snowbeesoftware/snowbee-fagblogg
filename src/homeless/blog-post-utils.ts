@@ -76,7 +76,6 @@ export const getBlogPostFromSlug = cache(async (slug: string): Promise<BlogPostI
 })
 
 const safeLocalDate = (input: any): LocalDate | null => {
-    console.log(input)
     if (typeof input !== "string") {
         return null
     }
