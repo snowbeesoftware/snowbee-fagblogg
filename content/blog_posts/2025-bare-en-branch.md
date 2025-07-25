@@ -14,18 +14,13 @@ Kontinuerlig integrasjon. Continous integration. CI.
 
 CI handler ikke bare om automatiserte bygg, men idéen om at man integrerer komponentene i systemet sitt, kontinuerlig.
 
-Alle som har jobbet litt med git vet hvor moro det er å jobbe med noe i dager eller uker, og så skulle kose seg med merge conflicts i noen timer (minst). 
+Alle som har jobbet litt med git vet hvor moro det er å kose seg med merge-konflikter etter å ha jobbet med noe i dages- eller ukesvis. Dette kan man heldigvis bøte på ved at hver enkelt utvikler hyppig rebaser sin feature branch mot main. Da gjør utvikleren på sett og vis sin egen kontinuerlige integrasjon.
 
-Greit nok, men dette problemet kan reduseres ved at hver enkelt utvikler gjør sin egen lokale kontinuerlige integrasjon, ved å rebase sin feature branch mot main. Dette er helt korrekt observert! Hyppig (les: kontinuerlig) rebase, teller definitivt som kontinuerlig integrasjon.
-
-Likevel har man i praksis `1 + antall brancher` versjoner av kodebasen. Hver enkelt langtlevende featurebranch er integrert mot main, men de er ikke integrert mot hverandre. Dersom feature branch A har noe nyttig util-kode i seg som feature branch B trenger, må man smøre seg med tålmodighet og håpe branch A merges inn snart.
-
-Det er riktignok fullt mulig å få det til. F.eks kan utils fra feature branch A trekkes ut i en egen feature branch C, som man kjapt får inn i main siden det bare er noen utils som ingen bruker. Så kan både A og B rebase mot main. 
-
+Men branchene deler ikke kode seg imellom. Hvis feature branch A har noe nyttig util-kode i seg som feature branch B trenger, må man smøre seg med tålmodighet. I praksis sitter man igjen med `1 + antall brancher` versjoner av kodebasen. Det er riktignok fullt mulig å få det til, ved at man lager en egen branch C for utils og får de merget inn i main isolert sett. Men det oppleves kanskje unødvendig jobbigt om man er en liten håndfull utviklere som bare har lyst til å få ting gjort.
 
 ## Uferdig kode i produksjon
 
-Men hvis man ikke har brancher, hvordan jobber man da med funksjonalitet som tar dagesvis eller ukesvis å få produksjonsklart?
+Men klarer man seg uten brancher? Hvordan jobber vi med funksjonalitet som tar dagesvis eller ukesvis å få produksjonsklart?
 
 En løsning kunne jo være å ikke pushe uferdig kode. Når man bruker git, har man i praksis én branch per utvikler. Men da er man jo i praksis like langt, og har en haug med kode liggende hos hver enkelt utvikler som ikke er integrert på noe vis.
 
