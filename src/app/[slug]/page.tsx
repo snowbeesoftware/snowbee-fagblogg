@@ -6,6 +6,9 @@ import plainText from "remark-plain-text"
 import {DateTimeFormatter} from "@js-joda/core"
 import {BlogPostAuthor} from "@/components/BlogPostAuthor"
 import {Metadata, ResolvingMetadata} from "next"
+import remarkRehype from "remark-rehype"
+import rehypeHighlight from "rehype-highlight"
+import rehypeStringify from "rehype-stringify"
 
 export async function generateMetadata(
     props: {params: Promise<{slug: string}>},
@@ -44,7 +47,9 @@ export default async function BlogPost(props: {params: Promise<{slug: string}>})
         .process(blogPost.headers["description"] ?? "")
 
     const body = await remark()
-        .use(html)
+        .use(remarkRehype)
+        .use(rehypeHighlight)
+        .use(rehypeStringify)
         .process(await blogPost.getBody())
 
     return (

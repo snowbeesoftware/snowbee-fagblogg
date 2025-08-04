@@ -32,7 +32,7 @@ body {
 }
 
 .sb_typography > :is(p, pre, blockquote, ul, ol, dl):not(:last-child) {
-  @apply mb-4
+  @apply mb-6
 }
 
 .sb_typography h2 {
@@ -43,10 +43,34 @@ body {
   @apply bg-sb-fagblogg-panel/50 border border-sb-fagblogg-panel rounded-xl p-4
 }
 
-.sb_typography p code {
-  @apply bg-sb-fagblogg-panel p-0.5
+.sb_typography p code,
+.sb_typography ul code,
+.sb_typography ol code,
+.sb_typography dl code,
+.sb_typography blockquote code {
+  @apply  bg-sb-fagblogg-panel p-0.5
 }
 
 .sb_typography a {
   @apply text-blue-500 dark:text-blue-400 underline
+}
+
+.sb_typography ul {
+  @apply pl-4
+}
+
+.sb_typography ul li {
+  @apply list-disc
+}
+
+.sb_typography .hljs-keyword {
+  @apply text-fuchsia-400
+}
+
+.sb_typography .hljs-title {
+  @apply font-semibold
+}
+
+.sb_typography .hljs-string {
+  @apply text-emerald-700 dark:text-emerald-500
 }
