@@ -10,7 +10,7 @@ description: |
 
 Alle error-logger i systemet vårt poster en melding til en Slack-kanal.
 
-Hvordan unngår vi ta hele gjengen får [alarm fatigue](https://www.ncbi.nlm.nih.gov/books/NBK555522/)?
+Hvordan unngår vi at hele gjengen får [alarm fatigue](https://www.ncbi.nlm.nih.gov/books/NBK555522/)?
 
 Vi kjører en policy vi kaller "null hull". Det vil si at alle feil skal håndteres på et eller annet vis, og at alle exceptions og error-logger skal være "på ordentlig".
 
