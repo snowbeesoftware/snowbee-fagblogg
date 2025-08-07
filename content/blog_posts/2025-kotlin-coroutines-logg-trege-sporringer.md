@@ -3,7 +3,7 @@ title: En kjekk Kotlin-funksjon som logger trege SQL-er
 published: 2025-08-04
 author: august
 description: |
-    Coroutines er kraftige saker! Vi har laget oss en kjekk liten funksjon som kan pakke SQL-er (og hva som helst async, egentlig), og logger en feil om det tok mere enn 10 sekunder.
+    Coroutines er kraftige saker! Her er historien om funksjonen som kan pakke inn SQL-er (og hva som helst async, egentlig), og roper ut om spørringen tok lengere tid enn 10 sekunder.
 ---
 
 ## Null hull
