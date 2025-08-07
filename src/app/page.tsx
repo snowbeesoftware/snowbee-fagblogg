@@ -25,8 +25,13 @@ export default async function Home() {
                 }
             >
                 <p>
-                    Velkommen til SnowBee sin tekniske fagblogg! Her skriver vi løst og fast om
-                    hvordan vi jobber med softwareutvikling.
+                    Velkommen til SnowBee sin tekniske fagblogg! Her kan du lese om hva vi driver
+                    med, og hvordan vi driver med det.
+                </p>
+
+                <p>
+                    Og en vakker dag kan du sikker lese litt både her og på{" "}
+                    <a href="https://www.snowbee.no">snowbee.no</a> om hva i alle dager SnowBee er!
                 </p>
             </div>
 
