@@ -91,7 +91,7 @@ Når `block` har kjørt ferdig, kaller vi `cancel()` på `loggerTask`. Det betyr
 
 ## Funksjonen i bruk
 
-Her er et eksempel på hvordan denne funksjonen kalles om du for eksempel bruker [Kotliquery](github.com/seratch/kotliquery) til å kjøre SQL-ene dine, som vi gjør.
+Her er et eksempel på hvordan denne funksjonen kalles om du for eksempel bruker [Kotliquery](https://github.com/seratch/kotliquery) til å kjøre SQL-ene dine, som vi gjør.
 
 
 ```kotlin
