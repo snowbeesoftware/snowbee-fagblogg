@@ -93,7 +93,7 @@ Det var riktignok én ting som ble dårligere når vi self-hoster.
 
 Selv om _bygget_ er raskt med vår egen byggeserver, er _deployments_ tregt. På Vercel tar det et par sekunder fra bygget er ferdig til ny versjon ligger ute. På ECS under Fargate med awsvpc som networking mode, er det snakk om en liten håndfull med dyrbare minutter for at AWS skal få alt opp og gå og deploye siste versjon.
 
-Fargate kan _bare_ kjøre i "awsvpc"-modus, som i praksis betyr at AWS lager en egen VPC med sitt eget network interface og alt som hører med for hver eneste instans av Docker-imagene du kjører der. Dette har naturligvis en viss overhead som vi ikke betaler for i penger (Fargate tar betalt per minutt du kjører instansene dine), men kostnaden kommer altså i form av trege deplomyments.
+Fargate kan _bare_ kjøre i "awsvpc"-modus, som i praksis betyr at AWS lager en egen VPC med sitt eget network interface og alt som hører med for hver eneste instans av Docker-imagene du kjører der. Dette har naturligvis en viss overhead som vi ikke betaler for i penger (Fargate tar betalt per minutt du kjører instansene dine), men kostnaden kommer altså i form av trege deployments.
 
 ## Lykke til!
 
