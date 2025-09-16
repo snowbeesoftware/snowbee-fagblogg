@@ -55,12 +55,17 @@ body {
   @apply text-blue-500 dark:text-blue-400 underline
 }
 
-.sb_typography ul {
-  @apply pl-4
+.sb_typography ul,
+.sb_typography ol {
+  @apply pl-6
 }
 
-.sb_typography ul li {
+.sb_typography ul  {
   @apply list-disc
+}
+
+.sb_typography ol {
+  @apply list-decimal
 }
 
 .sb_typography .hljs-keyword {
