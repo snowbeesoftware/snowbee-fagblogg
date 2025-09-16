@@ -48,7 +48,7 @@ Heldigvis er det [helt standard innebygget støtte for å self-hoste Next.js](ht
 
 Likevel er det et par ting som er kritisk for å få alt til og fungere, som enten ikke er nevnt i dokumentasjonen, eller som ikke fremstår som spesielt viktig.
 
-## Bruk en CDN til CSS, JS, og bilder
+## Stalltips 1: Bruk en CDN til CSS, JS, og bilder
 
 Ut av boksen, ligger alle assets (CSS, JS og "statiske" bilder) i Next.js-appen og hostes igjennom den. Det vil si at CSS-fila di typisk er tilgjengelig på noe som `/_static/css/123abc666.css`.
 
@@ -72,7 +72,7 @@ aws s3 sync ./extracted/app/public \
 
 Next.js trenger bare å få en `assetPrefix` i configen sin, så vil den hente `/_static/css/123abc666.css` derfra, i stedet for å prøve og hente den fra seg selv.
 
-## Sett en encryption key for server actions
+## Stalltips 2: Sett en encryption key for server actions
 
 De fleste Next.js-apper ender opp med minst en liten håndfull server actions. For alt av I/O til backend og BFF bør du bruke API routes, men om du f.eks ønsker å ha en `<form>` på en Next.js-side som sender inn node data over POST og rendrer på nytt med oppdatert tilstand, er du nødt til å bruke en server action. Altså disse magiske filene med `"use server"` i toppen av fila, som kun kan eksportere asynkrone funksjoner.
 
