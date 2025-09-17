@@ -55,9 +55,9 @@ Ut av boksen, ligger alle assets (CSS, JS og "statiske" bilder) i Next.js-appen 
 Det er en URL som bare funker på akkurat den versjonen av bygget, og som forsvinner når du deployer ny versjon. For å være hakket mere konkret, vil du få webside uten CSS-filer om følgende skjer:
 
 1. Åpne `minapp.no`
-2. Du traff den gamle versjonen av appen
+2. Du traff den _gamle_ versjonen av appen
 3. Nettleseren gjør et nytt kall for å hente ut `/_static/css/123abc666.css`
-4. Dette kallet traff den gamle versjon av appen
+4. Du traff den _nye_ versjonen av appen hvor fila ikke finnes.
 5. CSS-fila får 404 og nettsiden din blir seendes ut som om du har [designet et programmeringsspråk](http://www.wall.org/~larry/).
 
 Derfor er det essensielt å bruke en ekstern CDN til assets. Dette er heldigvis helt trivielt å sette opp i Next.js. Vi bruker S3 + CloudFront i AWS, og kjører dette scriptet som en del av frontend-bygget:
