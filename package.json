@@ -6,15 +6,15 @@
     "dev": "next dev --turbopack --port 3020",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@js-joda/core": "^5.6.5",
     "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0",
-    "next": "15.3.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "next": "16.0.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "rehype-highlight": "^7.0.2",
     "rehype-stringify": "^10.0.1",
     "remark": "^15.0.1",
@@ -23,17 +23,16 @@
     "remark-rehype": "^11.1.2"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.1.16",
     "@types/js-yaml": "^4.0.9",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.3.3",
-    "eslint-config-prettier": "^10.1.5",
-    "prettier": "3.5.3",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "@types/node": "^24.9.2",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "eslint": "^9.38.0",
+    "eslint-config-next": "16.0.1",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "3.6.2",
+    "tailwindcss": "^4.1.16",
+    "typescript": "^5.9.3"
   }
 }
