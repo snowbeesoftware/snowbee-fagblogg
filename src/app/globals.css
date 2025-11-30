@@ -51,6 +51,10 @@ body {
   @apply  bg-sb-fagblogg-panel p-0.5
 }
 
+.sb_typography blockquote {
+  @apply border-l-4 border-foreground/20 pl-2 text-foreground/80
+}
+
 .sb_typography a {
   @apply text-blue-500 dark:text-blue-400 underline
 }
