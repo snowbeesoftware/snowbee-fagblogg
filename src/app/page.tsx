@@ -21,13 +21,8 @@ export default async function Home() {
         <div>
             <div className={"sb_typography p-4 text-foreground/80"}>
                 <p>
-                    Velkommen til SnowBee sin tekniske fagblogg! Her kan du lese om hva vi driver
-                    med, og hvordan vi driver med det.
-                </p>
-
-                <p>
-                    Og en vakker dag kan du sikker lese litt både her og på{" "}
-                    <a href="https://www.snowbee.no">snowbee.no</a> om hva i alle dager SnowBee er!
+                    Velkommen til <a href="https://www.snowbee.no">SnowBee</a> sin tekniske
+                    fagblogg! Her kan du lese om hva vi driver med, og hvordan vi driver med det.
                 </p>
             </div>
 
